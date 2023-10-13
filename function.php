@@ -12,68 +12,12 @@ function dd($value){
     die('Script php arrêté !!!');
 }
 
+$colors = ['red', 'green', 'blue', 'cyan', 'magenta', 'yellow', 'black'];
 
-$people = [
-    $person,
-    [
-        'nom' => 'laster Delaney',
-        'age' => 32,
-        'yeux' => 'bleu',
-        'email' => 'delaneylester@zanymax.com',
-        'fruit' => 'fraise',
-    ],
-    [
-        'nom' => 'ball haffer',
-        'age' => 20,
-        'yeux' => 'blue',
-        'email' => 'ballshaffer@zensure.com',
-        'fruit' => 'apple',
-    ],
-    [
-        'nom' => 'Raymond Jimenez',
-        'age' => 21,
-        'yeux' => 'green',
-        'email' => 'raymondjimenez@tingles.com',
-        'fruit' => 'fraise',
-    ],
-    [
-        'nom' => 'Skinner West',
-        'age' => 27,
-        'yeux' => 'brown',
-        'email' => 'skinnerwest@isologica.com',
-        'fruit' => 'fraise',
-    ],
-    [
-        'nom' => 'Cabera jackson',
-        'age' => 27,
-        'yeux' => 'brown',
-        'email' => 'scabrerajackson@fibrebox.com',
-        'fruit' => 'apple',
-    ],
-];
 
-dbug($people);
-// unset($people);
-
-// $jsonPeopleArrayPhp = json_decode($jsonPerson,true);
-
-$urlApi = "https://ximg.es/64x64/000/fff";
-
-?>
-
-<figure>
-    <img src="<? =$urlApi['image'] ?>">
-                <figcaption>
-                    <ul>
-                        <li><? =$Person[0][1] ?></li>
-                        <li><? = ?></li>
-                    </ul>
-                </figcaption>
-            </img>
-        </figure>
-
-<?php
-
+foreach($colors as $color){
+    echo ucwords($color) . '<br>';
+}
 
 
 ?>
