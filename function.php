@@ -12,17 +12,51 @@ function dd($value){
     die('Script php arrêté !!!');
 }
 
-$tableau = [
-    [25, celsiusToFahrenheit(25)],
-    [03, celsiusToFahrenheit(03)],
-    [35, celsiusToFahrenheit(35)],
-    [11, celsiusToFahrenheit(11)],
-];
 
-function celsiusToFahrenheit($celsius) {
-    return round((9 / 5) * $celsius + 32);
-}
+$jsonPerson1 = [
+        'nom' => 'Jimenez',
+        'prenom' => 'Raymond',
+    ];
+$jsonAmi1 = [
+        'nom' => 'Grant',
+        'prenom' => 'Robert',
+        'yeux' => 'blue',
+    ];
+$jsonAmi2 = [
+        'nom' => 'Shaffer',
+        'prenom' => 'Ball',
+        'yeux' => 'vert',
+    ];
 
-$tableau = array_column($tableau, 1);
+dd($jsonPerson1);
+dd($jsonAmi);
 
-$tableauSTR = implode (', ', $tableau);
+$jsonPerson1 = json_encode($person1);
+$jsonAmi2 = json_encode($jsonAmi2);
+
+
+
+$urlApi = "https://ximg.es/64x64/000/fff";
+
+?>
+
+<figure>
+    <img src="<? //=$jsonPersonArrayPhp['image'] 
+                ?>">
+        <figcaption>
+            <ul>
+                <li><? "L'amie de" . =$jsonPerson1['prenom'] . " est " . 
+                    ?> <? //=$jsonPersonArrayPhp['nom'] 
+                                                            ?></li>
+                <li><? //=$jsonPersonArrayPhp['email'] 
+                    ?></li>
+            </ul>
+        </figcaption>
+    </img>
+</figure>
+
+<?php
+
+
+
+?>
