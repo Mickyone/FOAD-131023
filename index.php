@@ -24,8 +24,7 @@ dbug($tab1);
 <body>
     <figcaption>
         <ul>
-            <li><?php echo($STR_pair_numbers) ?></li>
-            <li><?php echo($STR_impair_numbers) ?></li>
+            <li><?php echo($tableauSTR) ?></li>
         </ul>
     </figcaption>
 </body>

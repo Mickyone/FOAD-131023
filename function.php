@@ -12,32 +12,17 @@ function dd($value){
     die('Script php arrêté !!!');
 }
 
-// Créer un tableau avec les nombres fournis
-$numbers = [27, 15, 34, 379, 248, 5643, 81, 211, 999, 142, 300, 572];
+$tableau = [
+    [25, celsiusToFahrenheit(25)],
+    [03, celsiusToFahrenheit(03)],
+    [35, celsiusToFahrenheit(35)],
+    [11, celsiusToFahrenheit(11)],
+];
 
-$pair_numbers = [];
-$impair_numbers = [];
-
-foreach ($numbers as $number) {
-  // Vérifier si le nombre est pair
-  if ($number % 2 == 0) {
-    // Le nombre est pair
-    $pair_numbers[] = $number;
-  }
-//   return $pair_numbers
-};
-
-$impair_numbers = [];
-foreach ($numbers as $number) {
-  // Vérifier si le nombre est pair
-  if ($number % 2 == 1) {
-    // Le nombre est pair
-    $impair_numbers[] = $number;
-    // return $impair_numbers
-  }
+function celsiusToFahrenheit($celsius) {
+    return round((9 / 5) * $celsius + 32);
 }
-dbug($pair_numbers);
-dbug($impair_numbers);
 
-$STR_pair_numbers = implode(', ', $pair_numbers);
-$STR_impair_numbers = implode(', ', $impair_numbers);
+$tableau = array_column($tableau, 1);
+
+$tableauSTR = implode (', ', $tableau);
