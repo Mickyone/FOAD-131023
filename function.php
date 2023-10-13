@@ -13,47 +13,64 @@ function dd($value){
 }
 
 
-$jsonPerson1 = [
-        'nom' => 'Jimenez',
-        'prenom' => 'Raymond',
-    ];
-$jsonAmi1 = [
-        'nom' => 'Grant',
-        'prenom' => 'Robert',
+$people = [
+    $person,
+    [
+        'nom' => 'laster Delaney',
+        'age' => 32,
+        'yeux' => 'bleu',
+        'email' => 'delaneylester@zanymax.com',
+        'fruit' => 'fraise',
+    ],
+    [
+        'nom' => 'ball haffer',
+        'age' => 20,
         'yeux' => 'blue',
-    ];
-$jsonAmi2 = [
-        'nom' => 'Shaffer',
-        'prenom' => 'Ball',
-        'yeux' => 'vert',
-    ];
+        'email' => 'ballshaffer@zensure.com',
+        'fruit' => 'apple',
+    ],
+    [
+        'nom' => 'Raymond Jimenez',
+        'age' => 21,
+        'yeux' => 'green',
+        'email' => 'raymondjimenez@tingles.com',
+        'fruit' => 'fraise',
+    ],
+    [
+        'nom' => 'Skinner West',
+        'age' => 27,
+        'yeux' => 'brown',
+        'email' => 'skinnerwest@isologica.com',
+        'fruit' => 'fraise',
+    ],
+    [
+        'nom' => 'Cabera jackson',
+        'age' => 27,
+        'yeux' => 'brown',
+        'email' => 'scabrerajackson@fibrebox.com',
+        'fruit' => 'apple',
+    ],
+];
 
-dd($jsonPerson1);
-dd($jsonAmi);
+dbug($people);
+// unset($people);
 
-$jsonPerson1 = json_encode($person1);
-$jsonAmi2 = json_encode($jsonAmi2);
-
-
+// $jsonPeopleArrayPhp = json_decode($jsonPerson,true);
 
 $urlApi = "https://ximg.es/64x64/000/fff";
 
 ?>
 
 <figure>
-    <img src="<? //=$jsonPersonArrayPhp['image'] 
-                ?>">
-        <figcaption>
-            <ul>
-                <li><? "L'amie de" . =$jsonPerson1['prenom'] . " est " . 
-                    ?> <? //=$jsonPersonArrayPhp['nom'] 
-                                                            ?></li>
-                <li><? //=$jsonPersonArrayPhp['email'] 
-                    ?></li>
-            </ul>
-        </figcaption>
-    </img>
-</figure>
+    <img src="<? =$urlApi['image'] ?>">
+                <figcaption>
+                    <ul>
+                        <li><? =$Person[0][1] ?></li>
+                        <li><? = ?></li>
+                    </ul>
+                </figcaption>
+            </img>
+        </figure>
 
 <?php
 
